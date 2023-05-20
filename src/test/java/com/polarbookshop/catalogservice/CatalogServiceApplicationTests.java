@@ -21,7 +21,7 @@ class CatalogServiceApplicationTests {
         var bookToCreate = new Book(bookIsbn, "Title", "Author", 9.90);
         Book expectedBook = webTestClient
                 .post()
-                .uri("/books")
+                .uri("/v1/books")
                 .bodyValue(bookToCreate)
                 .exchange()
                 .expectStatus().isCreated()
@@ -30,7 +30,7 @@ class CatalogServiceApplicationTests {
 
         webTestClient
                 .get()
-                .uri("/books/" + bookIsbn)
+                .uri("/v1/books/" + bookIsbn)
                 .exchange()
                 .expectStatus().is2xxSuccessful()
                 .expectBody(Book.class).value(actualBook -> {
@@ -45,7 +45,7 @@ class CatalogServiceApplicationTests {
 
         webTestClient
                 .post()
-                .uri("/books")
+                .uri("/v1/books")
                 .bodyValue(expectedBook)
                 .exchange()
                 .expectStatus().isCreated()
@@ -61,7 +61,7 @@ class CatalogServiceApplicationTests {
         var bookToCreate = new Book(bookIsbn, "Title", "Author", 9.90);
         Book createdBook = webTestClient
                 .post()
-                .uri("/books")
+                .uri("/v1/books")
                 .bodyValue(bookToCreate)
                 .exchange()
                 .expectStatus().isCreated()
@@ -71,7 +71,7 @@ class CatalogServiceApplicationTests {
 
         webTestClient
                 .put()
-                .uri("/books/" + bookIsbn)
+                .uri("/v1/books/" + bookIsbn)
                 .bodyValue(bookToUpdate)
                 .exchange()
                 .expectStatus().isOk()
@@ -87,20 +87,20 @@ class CatalogServiceApplicationTests {
         var bookToCreate = new Book(bookIsbn, "Title", "Author", 9.90);
         webTestClient
                 .post()
-                .uri("/books")
+                .uri("/v1/books")
                 .bodyValue(bookToCreate)
                 .exchange()
                 .expectStatus().isCreated();
 
         webTestClient
                 .delete()
-                .uri("/books/" + bookIsbn)
+                .uri("/v1/books/" + bookIsbn)
                 .exchange()
                 .expectStatus().isNoContent();
 
         webTestClient
                 .get()
-                .uri("/books/" + bookIsbn)
+                .uri("/v1/books/" + bookIsbn)
                 .exchange()
                 .expectStatus().isNotFound()
                 .expectBody(String.class).value(errorMessage ->
