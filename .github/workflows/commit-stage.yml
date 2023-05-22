@@ -4,7 +4,7 @@ on: push
 
 env:
   REGISTRY: ghcr.io
-  IMAGE_NAME: praveen9bits/catalog-service
+  IMAGE_NAME: praveen19bits/catalog-service
   VERSION: latest
 
 jobs:
