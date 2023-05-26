@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: polar-postgres
+  name: bookshop-postgres
   labels:
-    db: polar-postgres
+    db: bookshop-postgres
 spec:
   selector:
     matchLabels:
-      db: polar-postgres
+      db: bookshop-postgres
   template:
     metadata:
       labels:
-        db: polar-postgres
+        db: bookshop-postgres
     spec:
       containers:
-        - name: polar-postgres
+        - name: bookshop-postgres
           image: postgres:latest
           env:
             - name: POSTGRES_USER
@@ -36,13 +36,13 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: polar-postgres
+  name: bookshop-postgres
   labels:
-    db: polar-postgres
+    db: bookshop-postgres
 spec:
   type: ClusterIP
   selector:
-    db: polar-postgres
+    db: bookshop-postgres
   ports:
   - protocol: TCP
     port: 5432
