@@ -1,13 +1,13 @@
-package com.polarbookshop.catalogservice.config;
+package com.bookshop.catalogservice.config;
 
 import lombok.Getter;
 import lombok.Setter;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
-@ConfigurationProperties(prefix = "polar")
+@ConfigurationProperties(prefix = "bookshop")
 @Setter
 @Getter
-public class PolarProperties {
+public class BookShopProperties {
 
 	/**
 	 * A message to welcome users.

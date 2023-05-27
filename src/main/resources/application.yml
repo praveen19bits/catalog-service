@@ -22,6 +22,6 @@ spring:
   sql:
     init:
       mode: always
-polar:
-  greeting: Welcome to the My book catalog!
+bookshop:
+  greeting: Welcome to the My BOOK catalog!
 

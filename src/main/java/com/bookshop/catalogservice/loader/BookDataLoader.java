@@ -1,7 +1,7 @@
-package com.polarbookshop.catalogservice.loader;
+package com.bookshop.catalogservice.loader;
 
-import com.polarbookshop.catalogservice.domain.Book;
-import com.polarbookshop.catalogservice.persistence.BookRepository;
+import com.bookshop.catalogservice.domain.Book;
+import com.bookshop.catalogservice.persistence.BookRepository;
 
 import org.springframework.boot.context.event.ApplicationReadyEvent;
 import org.springframework.context.annotation.Profile;
@@ -25,7 +25,7 @@ public class BookDataLoader {
 		System.out.println("In the loader, pushing data to backend...");
 		bookRepository.deleteAll();
 		var book1 = Book.of("1234567891", "Northern Lights", "Lyra Silverstar", 9.90);
-		var book2 = Book.of("1234567892", "Polar Journey", "Iorek Polarson", 12.90);
+		var book2 = Book.of("1234567892", "BookShop Journey", "Iorek Polarson", 12.90);
 		bookRepository.saveAll(List.of(book1, book2));
 
 	}

@@ -1,9 +1,10 @@
-package com.polarbookshop.catalogservice.domain;
+package com.bookshop.catalogservice.domain;
 
 import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
 
+import com.bookshop.catalogservice.domain.Book;
 import jakarta.validation.ConstraintViolation;
 import jakarta.validation.Validation;
 import jakarta.validation.Validator;

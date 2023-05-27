@@ -1,11 +1,12 @@
-package com.polarbookshop.catalogservice.domain;
+package com.bookshop.catalogservice.domain;
 
 import java.util.Optional;
 import java.util.stream.Collectors;
 import java.util.stream.StreamSupport;
 
-import com.polarbookshop.catalogservice.config.DataConfig;
-import com.polarbookshop.catalogservice.persistence.BookRepository;
+import com.bookshop.catalogservice.config.DataConfig;
+import com.bookshop.catalogservice.domain.Book;
+import com.bookshop.catalogservice.persistence.BookRepository;
 import org.junit.jupiter.api.Test;
 
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,10 +1,10 @@
-package com.polarbookshop.catalogservice.web;
+package com.bookshop.catalogservice.web;
 
 import java.util.HashMap;
 import java.util.Map;
 
-import com.polarbookshop.catalogservice.domain.BookAlreadyExistsException;
-import com.polarbookshop.catalogservice.domain.BookNotFoundException;
+import com.bookshop.catalogservice.domain.BookAlreadyExistsException;
+import com.bookshop.catalogservice.domain.BookNotFoundException;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.validation.FieldError;

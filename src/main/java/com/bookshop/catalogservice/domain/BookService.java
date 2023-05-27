@@ -1,6 +1,6 @@
-package com.polarbookshop.catalogservice.domain;
+package com.bookshop.catalogservice.domain;
 
-import com.polarbookshop.catalogservice.persistence.BookRepository;
+import com.bookshop.catalogservice.persistence.BookRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

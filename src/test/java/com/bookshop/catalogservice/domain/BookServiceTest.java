@@ -1,8 +1,12 @@
-package com.polarbookshop.catalogservice.domain;
+package com.bookshop.catalogservice.domain;
 
 import java.util.Optional;
 
-import com.polarbookshop.catalogservice.persistence.BookRepository;
+import com.bookshop.catalogservice.domain.Book;
+import com.bookshop.catalogservice.domain.BookAlreadyExistsException;
+import com.bookshop.catalogservice.domain.BookNotFoundException;
+import com.bookshop.catalogservice.domain.BookService;
+import com.bookshop.catalogservice.persistence.BookRepository;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;

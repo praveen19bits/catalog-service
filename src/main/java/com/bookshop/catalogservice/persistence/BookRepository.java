@@ -1,8 +1,8 @@
-package com.polarbookshop.catalogservice.persistence;
+package com.bookshop.catalogservice.persistence;
 
 import java.util.Optional;
 
-import com.polarbookshop.catalogservice.domain.Book;
+import com.bookshop.catalogservice.domain.Book;
 import org.springframework.data.jdbc.repository.query.Modifying;
 import org.springframework.data.jdbc.repository.query.Query;
 import org.springframework.data.repository.CrudRepository;

@@ -4,7 +4,7 @@ plugins {
 	id 'java'
 }
 
-group = 'com.polarbookshop'
+group = 'com.bookshop'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '17'
 
@@ -44,7 +44,7 @@ bootRun {
 }
 
 bootBuildImage {
-	imageName = "catalog-service-buildpack"
+	imageName = "${project.name}"
 	environment = ["BP_JVM_VERSION": "17.*"]
 }
 tasks.named('test') {
