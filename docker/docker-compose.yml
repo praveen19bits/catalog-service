@@ -9,7 +9,7 @@ services:
     image: "catalog-service"
     container_name: "catalog-service"
     ports:
-      - 9001:9002
+      - 9001:9001
       - 8001:8001
     environment:
       # Buildpacks environment variable to configure the number of threads in memory calculation
