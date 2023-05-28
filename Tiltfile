@@ -13,7 +13,7 @@ docker_build('catalog-service', '.')
 
 
 # Deploy
-k8s_yaml(['k8s/deployment.yml', 'k8s/postgresql.yml'])
+k8s_yaml(['k8s/deployment.yml'])
 
 
 # Manage
