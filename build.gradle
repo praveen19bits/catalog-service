@@ -16,11 +16,20 @@ repositories {
 
 ext {
 	set('testcontainersVersion', "1.17.3")
+	//set('otelVersion', "1.17.0")
 }
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-actuator'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	implementation 'org.springframework.boot:spring-boot-starter-validation'
+	runtimeOnly 'io.micrometer:micrometer-registry-prometheus'
+	implementation 'io.micrometer:micrometer-tracing-bridge-otel'
+	implementation 'io.opentelemetry:opentelemetry-exporter-otlp'
+	implementation 'com.github.loki4j:loki-logback-appender:1.4.1'
+	//implementation 'io.micrometer:micrometer-tracing-bridge-brave'
+
+	//runtimeOnly "io.opentelemetry.javaagent:opentelemetry-javaagent:${otelVersion}"
+
 
 	compileOnly 'org.projectlombok:lombok'
 	annotationProcessor 'org.projectlombok:lombok'

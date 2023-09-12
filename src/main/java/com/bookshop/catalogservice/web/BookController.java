@@ -16,10 +16,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 @RestController
 @RequestMapping("/v1/books")
 public class BookController {
 
+    private static final Logger log = LoggerFactory.getLogger(BookController.class);
     private final BookService bookService;
 
     public BookController(BookService bookService) {
@@ -28,6 +31,7 @@ public class BookController {
 
     @GetMapping
     public Iterable<Book> get() {
+        log.info("Fetching the list of Books ...");
         return bookService.viewBookList();
     }
 
