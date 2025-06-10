@@ -32,3 +32,4 @@ After building the application, you can also run it from the Java CLI:
 java -jar build/libs/catalog-service-0.0.1-SNAPSHOT.jar
 ```
 GWFRON-1
+GWFRON-1-2
